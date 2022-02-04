@@ -13,6 +13,12 @@ public class Paciente {
         this.estado = (int)(Math.random() * 5) + 1;
     }
 
+    public Paciente(String nombre, int edad, int estado) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.estado = estado;
+    }
+
     //getters
     public int getEdad() {
         return this.edad;
@@ -42,7 +48,7 @@ public class Paciente {
         int diferencia = o.getEstado() - this.getEstado();
 
         if (diferencia == 0) {
-            diferencia = this.getEstado() - o.getEstado();
+            diferencia = this.getEdad() - o.getEstado();
         }
         return diferencia;
     }
