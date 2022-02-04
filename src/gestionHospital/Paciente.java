@@ -39,11 +39,11 @@ public class Paciente {
     }
 
     public int compareTo(Paciente o) {
-        int gravedad = o.getEstado() - this.getEstado();
+        int diferencia = o.getEstado() - this.getEstado();
 
-        if (gravedad == 0) {
-            gravedad = o.getEstado() - this.getEstado();
+        if (diferencia == 0) {
+            diferencia = this.getEstado() - o.getEstado();
         }
-        return gravedad;
+        return diferencia;
     }
 }
