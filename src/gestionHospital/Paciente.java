@@ -34,21 +34,21 @@ public class Paciente {
         Paciente.this.estado++;
     }
 
-    //emperora al paciente
+    //empeora al paciente
     public void empeorar() {
         Paciente.this.estado--;
     }
 
     @Override
     public String toString() {
-        return this.nombre + "" + this.edad + " " + this.estado + "\n";
+        return this.nombre + " " + this.edad + " " + this.estado + "\n";
     }
 
     public int compareTo(Paciente o) {
         int diferencia = o.getEstado() - this.getEstado();
 
         if (diferencia == 0) {
-            diferencia = this.getEdad() - o.getEstado();
+            diferencia = this.getEdad() - o.getEdad();
         }
         return diferencia;
     }
