@@ -14,10 +14,15 @@ public class TestPaciente {
             System.out.println(paciente2);
         }
 
-        if (paciente1.getEstado() < paciente2.getEstado()) {
-            paciente1.mejorar();
-        } else {
-            paciente2.mejorar();
+        while (paciente1.getEstado() != paciente2.getEstado()) {
+            if (paciente1.getEstado() < paciente2.getEstado()) {
+                paciente1.mejorar();
+            } else {
+                paciente2.mejorar();
+            }
         }
+
+        System.out.println("El estado final del paciente 1 es:" + paciente1);
+        System.out.println("El estado final del paciente 2 es:" + paciente2);
     }
 }
