@@ -5,10 +5,9 @@ import java.util.Arrays;
 public class Hospital {
 
     //atributos
-    private final int MAXC = 200;
+    private static final int MAXC = 200;
     private Paciente[] listaCamas;
     private int numLibres;
-
 
     //constructor
     public Hospital() {
@@ -31,10 +30,8 @@ public class Hospital {
     //Devuelve el número de la primera cama libre
     //del array listaCamas si hay camas libres o devuelve un 0 si no las hay.
     public int primeraLibre() {
-        boolean estaLibre = false;
-        for (int i = 1; i < listaCamas.length && !estaLibre; i++) {
+        for (int i = 1; i < listaCamas.length; i++) {
             if (listaCamas[i] == null) {
-                estaLibre = true;
                 return i;
             }
         }
@@ -61,12 +58,8 @@ public class Hospital {
 
     //La cama i del hospital pasa a estar libre. (Afectará al número de camas libres)
     private void darAltaPaciente(int i) {
-        if (i > 0) {
             listaCamas[i] = null;
             numLibres++;
-        } else {
-            System.out.println("ERROR, No se ha dado de alta porque no existe la cama 0");
-        }
     }
 
     //Se mejora el estado (método mejorar() de Paciente)
@@ -76,12 +69,10 @@ public class Hospital {
         boolean hayPaciente = false;
 
         for (int i = 1; i < listaCamas.length; i++) {
-
-            if (listaCamas[i] != null){
+            if (listaCamas[i] != null) {
                 listaCamas[i].mejorar();
-                if (listaCamas[i].getEstado() == 6) {
+                if (listaCamas[i].getEstado() > 5) {
                     darAltaPaciente(i);
-                    numLibres++;
                 }
             }
         }
