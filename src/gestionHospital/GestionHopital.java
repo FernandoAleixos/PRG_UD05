@@ -36,11 +36,17 @@ public class GestionHopital {
             System.out.println("ERROR, el hospital esta lleno.");
         }
 
+        //Comprobamos el hospital antes de dar de alta
+        System.out.println("-ANTES-");
+        System.out.println(hospital1);
+
         //Realizar proceso de darAlta
-        while (hospital1.getNumLibres() <= 198) {
+        while (hospital1.getNumLibres() < 198) {
             hospital1.darAltas();
         }
 
+        //Comprobamos el hospital después de dar de alta
+        System.out.println("\n-DESPUÉS-");
         System.out.println(hospital1);
     }
 }
