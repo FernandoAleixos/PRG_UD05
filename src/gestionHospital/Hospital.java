@@ -82,13 +82,15 @@ public class Hospital {
     @Override
     public String toString() {
         String resultado = "";
+        int cont = 0;
 
         for (Paciente paciente : listaCamas) {
             if (paciente != null) {
-                resultado += paciente.toString();
+                resultado += cont + " " + paciente.toString();
             } else {
-                resultado += "Libre\n";
+                resultado += cont + " Libre\n";
             }
+            cont++;
         }
         return resultado;
     }

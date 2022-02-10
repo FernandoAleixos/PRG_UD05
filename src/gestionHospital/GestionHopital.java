@@ -41,7 +41,7 @@ public class GestionHopital {
         System.out.println(hospital1);
 
         //Realizar proceso de darAlta
-        while (hospital1.getNumLibres() < 198) {
+        while (hospital1.getNumLibres() <= 198) {
             hospital1.darAltas();
         }
 
