@@ -10,13 +10,13 @@ public class Corredor {
     //Atributos
     private int dorsal;
     private String nombre;
-    private double tiempoS;
+    private double tiempo;
     static int siguienteDorsal = 1;
 
     public Corredor(int d, String n) {
         this.dorsal = d;
         this.nombre = n;
-        this.tiempoS = 0;
+        this.tiempo = 0;
     }
 
     //Getters
@@ -28,16 +28,17 @@ public class Corredor {
         return nombre;
     }
 
-    public double getTiempoS() {
-        return tiempoS;
+    /**Este método devuelve el tiempo del corredor en double**/
+    public double getTiempo() {
+        return tiempo;
     }
 
     //Métodos de la clase
     //Establece el tiempo tardado por el corredor.
     //Lanzará la excepción si el tiempo indicado es negativo.
     public void setTiempo(double t) throws IllegalArgumentException {
-        if (tiempoS >= 0) {
-            this.tiempoS = t;
+        if (tiempo >= 0) {
+            this.tiempo = t;
         } else {
             throw new IllegalArgumentException();
         }
@@ -47,20 +48,15 @@ public class Corredor {
     //t1 indica la hora de comienzo y t2 la hora de finalización (expresada en segundos).
     //La diferencia en segundos entre los dos datos servirá para establecer el tiempo tardado por el Corredor.
     public void setTiempo(double t1, double t2) throws IllegalArgumentException {
-        double diferencia = 0;
-
-        if (tiempoS >= 0) {
-            diferencia = t2 - t1;
-            setTiempo(diferencia);  //Llamamos al método setTiempo(double t) de forma recursiva para que se encargue de
-            // lanzar la excepción en el caso de que se cumpla
-        }
+        double diferencia = t2 - t1;
+        this.setTiempo(diferencia);
     }
 
     //Devuelve un String con los datos del corredor, de la forma:
     //(234) - Juan Ramirez - 2597 segundos
     @Override
     public String toString() {
-        return "(" + dorsal + ") - " + nombre + " - " + tiempoS + " segundos\n";
+        return "(" + dorsal + ") - " + nombre + " - " + tiempo + " segundos";
     }
 
     //Devuelve true si los corredores tienen el mismo dorsal y false en caso contrario
@@ -87,6 +83,6 @@ public class Corredor {
     //Para ello la clase hará uso de un atributo static int siguienteDorsal
     //que incrementará cada vez que se genere un nuevo dorsal.
     public static int generarDorsal() {
-        return siguienteDorsal++; //Primero devolvemos el siguiene dorsal y luego se incrementa
+        return siguienteDorsal++; //Primero devolvemos el siguiente dorsal y luego se incrementa
     }
 }
