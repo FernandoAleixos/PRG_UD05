@@ -80,10 +80,6 @@ public class ListaCorredores {
 
             }
         }
-        if (encontrado) {
-            for (int i = pos - 1; )
-        }
-
     }
 
     class ElementoNoEncontradoException extends Exception {
