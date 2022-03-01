@@ -7,6 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/src/gestionHospital" />
       <excludeFolder url="file://$MODULE_DIR$/src/gestionEmpleados" />
       <excludeFolder url="file://$MODULE_DIR$/src/gestionEmplea2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/contrareloj" />
+      <excludeFolder url="file://$MODULE_DIR$/src/wrappers" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
