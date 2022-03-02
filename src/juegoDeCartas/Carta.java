@@ -88,9 +88,16 @@ public class Carta {
     //(sobrescritura del método toString de Object ).
     @Override
     public String toString() {
+        String[] baraja = new String[BASTOS + 1];
+
+        baraja[OROS] = "oros";
+        baraja[COPAS] = "copas";
+        baraja[ESPADAS] = "espadas";
+        baraja[BASTOS] = "bastos";
+
         switch (palo) {
             case 0:
-                return this.getValor() + " de oros.";
+                return this.getValor() + " de " + baraja[OROS] + ".";
 
             case 1:
                 return this.getValor() + " de copas.";
