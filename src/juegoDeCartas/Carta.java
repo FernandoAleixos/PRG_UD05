@@ -111,18 +111,4 @@ public class Carta {
         return "ERROR. El valor dado no es correcto.";
     }
 
-    public static void main(String[] args) {
-        Carta carta1 = new Carta();
-        Carta carta2 = new Carta(3, 12);
-
-        System.out.println(carta1.compareTo(carta2));
-
-        System.out.println(carta1.equals(carta2));
-
-        System.out.println(carta1.sigPalo());
-        System.out.println(carta2.sigPalo());
-
-        System.out.println(carta1);
-        System.out.println(carta2);
-    }
 }
