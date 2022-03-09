@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class _2_Actividades {
     //1. Introducir por teclado un valor de tipo double y convertirlo en Wrapper.
-    /*public static void main(String[] args) {
+    /*ºpublic static void main(String[] args) {
         Scanner tec = new Scanner(System.in);
 
         System.out.println("Introduce un número: ");
@@ -34,7 +34,7 @@ public class _2_Actividades {
         Scanner tec = new Scanner(System.in);
 
         System.out.println("Introduce un número: ");
-        String f1 = tec.nextLine(); //f1="3.14";
+        String f1 = tec.nextLine(); //f1="3.14"
         Float float1 = new Float(f1);
 
         System.out.println(float1.toString());
@@ -59,9 +59,9 @@ public class _2_Actividades {
 
         //Decimal
         System.out.println("-Decimal-");
-        System.out.println(Integer.toString(suma, 10));
-        System.out.println(Integer.toString(resta, 10));
-        System.out.println(Integer.toString(multi, 10));
+        System.out.println(Integer.toString(suma, 8));
+        System.out.println(Integer.toString(resta, 8));
+        System.out.println(Integer.toString(multi, 8));
 
         //Hexadecimal
         System.out.println("-Hexadecimal-");

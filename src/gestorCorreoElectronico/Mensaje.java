@@ -47,4 +47,15 @@ public class Mensaje {
 
         return ;
     }
+
+    @Override
+    public String toString() {
+        return "Mensaje{" +
+                "codigo=" + codigo +
+                ", emisor='" + emisor + '\'' +
+                ", destinatario='" + destinatario + '\'' +
+                ", asunto='" + asunto + '\'' +
+                ", texto='" + texto + '\'' +
+                '}';
+    }
 }

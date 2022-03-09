@@ -9,7 +9,7 @@ public class JuegoCartas {
     //contrario, devolverá -1 cuando la primera carta es la ganadora y 1 si la segunda
     //carta es la ganadora.
     public static int ganadora(Carta c1, Carta c2, int triunfo) {
-
+        
         
         return ;
     }

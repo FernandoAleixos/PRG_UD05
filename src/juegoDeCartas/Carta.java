@@ -15,8 +15,13 @@ public class Carta {
     }
 
     public Carta(int palo, int valor) throws IllegalArgumentException {
-        this.palo = palo;
-        this.valor = valor;
+
+        if (palo <= BASTOS || valor <= 12) {
+            this.palo = palo;
+            this.valor = valor;
+        } else {
+            throw new IllegalArgumentException();
+        }
     }
 
     public int getPalo() {
@@ -110,5 +115,4 @@ public class Carta {
         }
         return "ERROR. El valor dado no es correcto.";
     }
-
 }
