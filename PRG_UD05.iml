@@ -10,7 +10,6 @@
       <excludeFolder url="file://$MODULE_DIR$/src/contrareloj" />
       <excludeFolder url="file://$MODULE_DIR$/src/juegoDeCartas" />
       <excludeFolder url="file://$MODULE_DIR$/src/wrappers" />
-      <excludeFolder url="file://$MODULE_DIR$/src/fechas" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
