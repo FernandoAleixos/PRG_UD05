@@ -34,6 +34,8 @@ public class Act_2_7 {
         LocalDate fecha = LocalDate.of(anyo, mes, dia);
 
         if (calendari.isLeapYear(anyo)) {
+            
+        } else {
 
         }
 
