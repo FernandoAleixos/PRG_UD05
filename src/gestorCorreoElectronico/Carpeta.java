@@ -47,8 +47,20 @@ public class Carpeta {
         }
     }
 
-    private class ElementoNoEncontradoException extends Exception {
+    static class ElementoNoEncontradoException extends Exception {
+
     }
 
+    //Método estático. Recibe dos
+    //Carpetas de correo y un código de mensaje y mueve el mensaje indicado de
+    //una carpeta a otra. Para ello buscará el mensaje en la carpeta origen. Si existe
+    //lo eliminará y lo añadirá a la carpeta de destino. Si el mensaje indicado no está
+    //en la carpeta de origen lanza ElementoNoEncontradoException .
+    public static void moverMensaje(Carpeta origen, Carpeta destino) throws ElementoNoEncontradoException {
+        if () {
 
+        } else {
+            throw new ElementoNoEncontradoException();
+        }
+    }
 }
