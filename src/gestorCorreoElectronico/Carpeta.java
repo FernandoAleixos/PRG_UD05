@@ -5,20 +5,19 @@ public class Carpeta {
     private Mensaje[] listaMensajes;
     private String nombre;
     private int numMensajes;
-    private int ultimaPosDisponible;
+
 
     public Carpeta(String nombre) {
         this.nombre = nombre;
         this.listaMensajes = new Mensaje[MAX_MENSAJES];
-        this.ultimaPosDisponible = 0;
+        this.numMensajes = 0;
     }
 
     public void añadir(Mensaje m) {
-        for (int i = ultimaPosDisponible; i < listaMensajes.length; i++) {
+        for (int i = numMensajes; i < listaMensajes.length; i++) {
             if (listaMensajes[i] == null) {
                 listaMensajes[i] = m;
                 numMensajes++;
-                ultimaPosDisponible = i + 1;
             }
         }
     }
@@ -30,16 +29,11 @@ public class Carpeta {
             if (listaMensajes[i] == m) {
                 listaMensajes[i] = null;
                 numMensajes--;
-                ultimaPosDisponible = i;
                 encontrado = true;
 
-                int pos = 0;
+                for (int j = numMensajes; j < listaMensajes.length - 1; j++){
+                    listaMensajes[j] = listaMensajes[j + 1];
 
-                while (listaMensajes[pos] != null && !encontrado) {
-                    pos++;
-                }
-                for (int j = listaMensajes.length - 1; j > pos; j--){
-                    listaMensajes[j - 1] = listaMensajes[j];
                 }
             } else {
                 throw new ElementoNoEncontradoException();
